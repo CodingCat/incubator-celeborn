@@ -76,6 +76,7 @@ import org.apache.celeborn.common.util.Utils;
 import org.apache.celeborn.reflect.DynConstructors;
 import org.apache.celeborn.reflect.DynFields;
 import org.apache.celeborn.reflect.DynMethods;
+import org.apache.celeborn.spark.FailedShuffleCleaner;
 
 public class SparkUtils {
   private static final Logger LOG = LoggerFactory.getLogger(SparkUtils.class);
