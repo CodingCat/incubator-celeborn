@@ -135,8 +135,8 @@ public class SparkUtils {
       TaskContext context,
       Boolean isWriter) {
     if (handle.throwsFetchFailure()) {
-      String appShuffleIdentifier = SparkCommonUtils.encodeAppShuffleIdentifier(handle.shuffleId(),
-          context);
+      String appShuffleIdentifier =
+          SparkCommonUtils.encodeAppShuffleIdentifier(handle.shuffleId(), context);
       return client.getShuffleId(
           handle.shuffleId(),
           appShuffleIdentifier,
@@ -319,8 +319,8 @@ public class SparkUtils {
 
     if (!(taskContext instanceof BarrierTaskContext)) return;
     int appShuffleId = handle.shuffleId();
-    String appShuffleIdentifier = SparkCommonUtils.encodeAppShuffleIdentifier(
-        appShuffleId, taskContext);
+    String appShuffleIdentifier =
+        SparkCommonUtils.encodeAppShuffleIdentifier(appShuffleId, taskContext);
 
     BarrierTaskContext barrierContext = (BarrierTaskContext) taskContext;
     barrierContext.addTaskFailureListener(
